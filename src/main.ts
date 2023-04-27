@@ -13,7 +13,7 @@ function contar() {
   const numeroTurnoElement = document.getElementById("numeroTurno");
 
   if (numeroTurnoElement !== null && numeroTurnoElement !== undefined) {
-    numeroTurnoElement.innerHTML = countMinus.toString();
+    numeroTurnoElement.innerHTML = countMinus.toString().padStart(2, "0");
   }
 }
 
@@ -37,7 +37,7 @@ function contarPlus() {
   const numeroTurnoElement = document.getElementById("numeroTurno");
 
   if (numeroTurnoElement !== null && numeroTurnoElement !== undefined) {
-    numeroTurnoElement.innerHTML = countPlus.toString();
+    numeroTurnoElement.innerHTML = countPlus.toString().padStart(2, "0");
   }
 }
 
