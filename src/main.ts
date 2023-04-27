@@ -1,5 +1,28 @@
 import "./style.css";
 
+function enviar() {
+  //IT READS THE INPUT
+  const campoTexto = (<HTMLInputElement>(
+    document.getElementById("campoNumeroTurno")
+  )).value;
+
+  //TAKE THE VALUE
+  const resultado = parseInt(campoTexto);
+
+  //SHOW THE VALUE
+  const numeroTurnoElement = document.getElementById("numeroTurno");
+
+  if (numeroTurnoElement !== null && numeroTurnoElement !== undefined)
+    numeroTurnoElement.innerHTML = resultado.toString().padStart(2, "0");
+}
+
+//CALL TO THE FUNCTION
+const enviarBoton = document.getElementById("hacerEnvio");
+
+if (enviarBoton !== null && enviarBoton !== undefined) {
+  enviarBoton.addEventListener("click", enviar);
+}
+
 // ----------------- COUNT LESS
 function contar() {
   //IT READS THE COUNTER
